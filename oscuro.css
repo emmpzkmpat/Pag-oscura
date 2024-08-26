@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh; /*MAXIMO 100 DE LA PANTALLA*/
+    width: 100vw;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    background-color: rgb(0, 0, 0,1); /* Fondo oscuro */
+    color: rgb(0, 0, 0); /* Hace el texto invisible inicialmente */
+    overflow: hidden; /*LO QUE SE DALGA DEL TAMAÑO SE CORTA*/
+    position: relative;
+
+    cursor: none;
+    user-select: none;
+}
+
+.content {
+    position: absolute;
+    height: 500vh; /* Altura total de la página */
+    min-height: 150cm;
+    width: 500vw; /* Ancho total de la página */
+    min-width: 100cm;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    padding: 8px;
+    z-index: 1; /* Asegura que el contenido esté sobre el fondo */
+
+    
+}
+
+.spotlight {
+    position: fixed;/* Cambia de absolute a fixed para que la linterna siga al cursor al hacer scroll */
+    width: 120px; /* Tamaño del área iluminada */
+    height: 120px; /* Tamaño del área iluminada */
+    background: radial-gradient(circle, rgba(255, 255, 255, .1) 20%, rgba(0, 0, 0, 0) 80%);
+    pointer-events: none; /* Permite clics a través de la linterna */
+    /* mix-blend-mode: lighten;  Modo de mezcla que ilumina el contenido debajo */
+    border-radius: 50%; /* Hace que la linterna sea redonda */
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+h2{
+    color: red;
+    font-size: 20px;
+}
+
+
+.final-text {
+    position: absolute; /* Posiciona el texto de forma absoluta */
+    bottom: 0; /* Lo posiciona en la parte más baja del contenedor */
+    right: 0; /* Lo posiciona en la parte más a la derecha del contenedor */
+    color: red; /* Color del texto */
+    margin: 20px; /* Margen opcional para separar el texto del borde */
+    z-index: 1; /* Asegura que el texto esté sobre otros elementos */
+    font-size: 16px; /* Tamaño de la fuente, ajusta según tus necesidades */
+}
